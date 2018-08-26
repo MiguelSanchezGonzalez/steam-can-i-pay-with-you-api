@@ -1,0 +1,36 @@
+{
+  "name": "steam-can-i-play-with-you-api",
+  "version": "1.0.0",
+  "description": "API for the application can I play with you",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msg-projects/steam-can-i-play-with-you-api.git"
+  },
+  "keywords": [
+    "steam",
+    "api",
+    "games",
+    "friends"
+  ],
+  "author": {
+    "name": "Miguel Sanchez Gonzalez",
+    "email": "miguelsanychez@gmail.com",
+    "url": "https://miguelsanchezgonzalez.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msg-projects/steam-can-i-play-with-you-api/issues"
+  },
+  "homepage": "https://github.com/msg-projects/steam-can-i-play-with-you-api#readme",
+  "dependencies": {
+    "cors": "2.8.4",
+    "dotenv": "6.0.0",
+    "express": "4.16.3",
+    "express-async-handler": "1.1.4",
+    "request": "2.88.0"
+  }
+}
