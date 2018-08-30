@@ -6,14 +6,27 @@ const base = 'http://api.steampowered.com';
 
 function fetchSteamAPI ( resource, input, extraRequestOptions = {} ) {
 
-    const inputJSON = JSON.stringify( input )
-    const endpoint = `${ base }/${ resource }/?key=${ KEY }&input_json=${ inputJSON }`;
+    let qs = {
+        key: KEY
+    };
+
+    if ( isServiceApi( resource ) ) {
+        qs.input_json = JSON.stringify( input )
+    } else {
+        qs = {
+            ...qs,
+            ...input
+        }
+    }
+
+    const endpoint = `${ base }/${ resource }/`;
 
     return new Promise( ( resolve, reject ) => {
 
         const requestOptions = {
             json: true,
-            ...extraRequestOptions
+            ...extraRequestOptions,
+            qs
         };
 
         get( endpoint, requestOptions, ( error, response, body ) => {
@@ -28,6 +41,10 @@ function fetchSteamAPI ( resource, input, extraRequestOptions = {} ) {
 
     } );
 }
+
+
+const isServiceApi = resource =>
+    resource.split( '/' )[ 0 ].endsWith( 'Service' );
 
 module.exports = {
     KEY,

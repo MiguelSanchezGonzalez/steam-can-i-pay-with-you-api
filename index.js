@@ -22,4 +22,7 @@ app.use( cors( {
 const getOwnedGames = require( './src/api/get-games-owned-by-user.js' );
 app.get( '/get-games-owned-by/:steamid', asyncHandler( getOwnedGames ) );
 
+const resolveSteamId = require( './src/api/resolve-steam-id.js' );
+app.get( '/resolve-steam-id/:id', asyncHandler( resolveSteamId ) );
+
 app.listen( port, () => console.log( 'app running' ) );
