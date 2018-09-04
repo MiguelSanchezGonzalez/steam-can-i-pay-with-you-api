@@ -42,7 +42,6 @@ function fetchSteamAPI ( resource, input, extraRequestOptions = {} ) {
     } );
 }
 
-
 const isServiceApi = resource =>
     resource.split( '/' )[ 0 ].endsWith( 'Service' );
 
