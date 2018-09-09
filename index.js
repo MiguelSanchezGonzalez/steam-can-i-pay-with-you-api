@@ -2,7 +2,7 @@
 const express = require( 'express' );
 const bodyParser = require('body-parser');
 const cors = require( 'cors' );
-const asyncHandler = require( 'express-async-handler' );
+const morgan = require( 'morgan' );
 
 // Envs
 require( 'dotenv' ).config();
@@ -14,9 +14,10 @@ const app = express();
 // Middleware
 app.use( bodyParser.urlencoded( { extended: true } ) );
 app.use( bodyParser.json() ); 
-app.use( cors( {
+app.use( cors( {    
     origin: webAppServer
 } ) );
+app.use( morgan( 'tiny' ) );
 
 const api = require( './src/routes' );
 app.use( api );
