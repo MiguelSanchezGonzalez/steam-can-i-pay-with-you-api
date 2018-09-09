@@ -2,11 +2,13 @@
 const router = require( 'express' ).Router();
 
 // Application
-const v1 = require( './v1' );
+const utils = require( './utils' );
+const player = require( './player' );
 
 router.use(
-    '/api/',
-    v1
+    '/v1/',
+    utils,
+    player
 );
 
 module.exports = router;
