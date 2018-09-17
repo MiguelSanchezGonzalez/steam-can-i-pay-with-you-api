@@ -1,32 +1,45 @@
 // Dependencies
 const { get } = require( 'request' );
 
-const KEY = require( '../../env.js' );
+const { KEY } = require( '../../env.js' );
 const base = 'http://api.steampowered.com';
 
-function fetchSteamAPI ( resource, input, extraRequestOptions = {} ) {
+const isServiceApi = resource => resource
+    .split( '/' )
+    .pop()
+    .endsWith( 'Service' );
+
+const getRequestOptions = ( input, resource ) => {
 
     let qs = {
         key: KEY
     };
 
     if ( isServiceApi( resource ) ) {
-        qs.input_json = JSON.stringify( input )
+        /* eslint-disable-next-line camelcase */
+        qs.input_json = JSON.stringify( input );
     } else {
         qs = {
             ...qs,
             ...input
-        }
+        };
     }
 
-    const endpoint = `${ base }/${ resource }/`;
+    return {
+        json: true,
+        qs
+    };
 
+};
+
+function fetchSteamAPI ( resource, input, extraRequestOptions = {} ) {
     return new Promise( ( resolve, reject ) => {
 
+        const endpoint = `${ base }/${ resource }/`;
+
         const requestOptions = {
-            json: true,
-            ...extraRequestOptions,
-            qs
+            ...getRequestOptions( input, resource ),
+            ...extraRequestOptions
         };
 
         get( endpoint, requestOptions, ( error, response, body ) => {
@@ -42,10 +55,8 @@ function fetchSteamAPI ( resource, input, extraRequestOptions = {} ) {
     } );
 }
 
-const isServiceApi = resource =>
-    resource.split( '/' )[ 0 ].endsWith( 'Service' );
 
 module.exports = {
-    KEY,
-    fetchSteamAPI
+    fetchSteamAPI,
+    KEY
 };
