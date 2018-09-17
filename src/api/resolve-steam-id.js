@@ -1,7 +1,7 @@
 const resolveVanityUrl = require( '../steam-api/resolveVanityURL.js' );
 
-async function getSteamAppId( { params: { id } }, response ) {
-    
+async function getSteamAppId ( { params: { id } }, response ) {
+
     let result;
 
     if ( Number( id ) ) {

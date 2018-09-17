@@ -1,7 +1,7 @@
 // Dependencies
 const { get } = require( 'request' );
 
-const KEY = process.env.KEY;
+const KEY = require( '../../env.js' );
 const base = 'http://api.steampowered.com';
 
 function fetchSteamAPI ( resource, input, extraRequestOptions = {} ) {
@@ -30,7 +30,7 @@ function fetchSteamAPI ( resource, input, extraRequestOptions = {} ) {
         };
 
         get( endpoint, requestOptions, ( error, response, body ) => {
-            
+
             if ( error || !body ) {
                 return reject( error );
             }
