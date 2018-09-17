@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "lint": "eslint index.js src/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,8 @@
     "request": "2.88.0"
   },
   "devDependencies": {
+    "@msg-labs/eslint-config": "^1.0.4",
+    "eslint": "^5.6.0",
     "nodemon": "^1.18.4"
   }
 }

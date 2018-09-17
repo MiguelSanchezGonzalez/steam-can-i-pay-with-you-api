@@ -1,0 +1,6 @@
+{
+    "extends": "@msg-labs",
+    "env": {
+        "node": true
+    }
+}
