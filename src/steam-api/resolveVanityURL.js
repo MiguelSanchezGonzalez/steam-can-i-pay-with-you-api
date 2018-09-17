@@ -1,4 +1,4 @@
-const { fetchSteamAPI }= require( './utils' );
+const { fetchSteamAPI } = require( './utils' );
 
 const resource = 'ISteamUser/ResolveVanityURL/v1';
 

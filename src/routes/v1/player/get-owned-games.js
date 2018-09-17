@@ -1,10 +1,15 @@
 // Express
-const router = require( 'express' ).Router( { mergeParams: true } );
+const router = require( 'express' ).Router;
 const asyncHandler = require( 'express-async-handler' );
 
 // Application
 const getOwnedGames = require( '../../../api/get-games-owned-by-user' );
+const routerOptions = { mergeParams: true };
 
-router.get( '/get-owned-games', asyncHandler( getOwnedGames ) );
+router( routerOptions )
+    .get(
+        '/get-owned-games',
+        asyncHandler( getOwnedGames )
+    );
 
 module.exports = router;
