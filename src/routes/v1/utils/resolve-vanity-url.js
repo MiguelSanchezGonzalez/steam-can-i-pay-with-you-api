@@ -5,10 +5,10 @@ const asyncHandler = require( 'express-async-handler' );
 // Application
 const getSteamAppId = require( '../../../api/resolve-steam-id.js' );
 
-router()
+const routes = router()
     .get(
         '/resolve-vanity-url/:id',
         asyncHandler( getSteamAppId )
     );
 
-module.exports = router;
+module.exports = routes;

@@ -4,10 +4,10 @@ const router = require( 'express' ).Router;
 // Application
 const resolveVanityUrl = require( './resolve-vanity-url.js' );
 
-router()
+const routes = router()
     .use(
         '/utils/',
         resolveVanityUrl
     );
 
-module.exports = router;
+module.exports = routes;

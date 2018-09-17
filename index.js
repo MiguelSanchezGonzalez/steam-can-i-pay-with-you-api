@@ -1,14 +1,16 @@
 // Application
 const express = require( 'express' );
-const bodyParser = require('body-parser');
+const bodyParser = require( 'body-parser' );
 const cors = require( 'cors' );
 const morgan = require( 'morgan' );
 
 // Envs
 const env = require( './env' );
-
 const port = env.PORT;
 const webAppServer = env.WEBAPP_SERVER;
+
+// Application
+const api = require( './src/routes' );
 
 const app = express();
 
@@ -20,7 +22,6 @@ app.use( cors( {
 } ) );
 app.use( morgan( 'tiny' ) );
 
-const api = require( './src/routes' );
 app.use( api );
 
-app.listen( port, () => console.log( 'app running' ) );
+app.listen( port );

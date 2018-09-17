@@ -5,11 +5,11 @@ const router = require( 'express' ).Router;
 const utils = require( './utils' );
 const player = require( './player' );
 
-router()
+const routes = router()
     .use(
         '/v1/',
         utils,
         player
     );
 
-module.exports = router;
+module.exports = routes;
