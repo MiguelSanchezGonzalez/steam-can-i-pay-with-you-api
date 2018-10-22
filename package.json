@@ -1,44 +1,44 @@
 {
-  "name": "steam-can-i-play-with-you-api",
-  "version": "1.0.1",
-  "description": "API for the application can I play with you",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "lint": "eslint index.js src/**/*.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/msg-projects/steam-can-i-play-with-you-api.git"
-  },
-  "keywords": [
-    "steam",
-    "api",
-    "games",
-    "friends"
-  ],
-  "author": {
-    "name": "Miguel Sanchez Gonzalez",
-    "email": "miguelsanychez@gmail.com",
-    "url": "https://miguelsanchezgonzalez.com"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/msg-projects/steam-can-i-play-with-you-api/issues"
-  },
-  "homepage": "https://github.com/msg-projects/steam-can-i-play-with-you-api#readme",
-  "dependencies": {
-    "cors": "2.8.4",
-    "dotenv": "6.0.0",
-    "express": "4.16.3",
-    "express-async-handler": "1.1.4",
-    "morgan": "^1.9.0",
-    "request": "2.88.0"
-  },
-  "devDependencies": {
-    "@msg-labs/eslint-config": "^1.0.4",
-    "eslint": "^5.6.0",
-    "nodemon": "^1.18.4"
-  }
+    "name": "steam-can-i-play-with-you-api",
+    "version": "1.0.1",
+    "description": "API for the application can I play with you",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "lint": "eslint index.js src/**/*.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/msg-projects/steam-can-i-play-with-you-api.git"
+    },
+    "keywords": [
+        "steam",
+        "api",
+        "games",
+        "friends"
+    ],
+    "author": {
+        "name": "Miguel Sanchez Gonzalez",
+        "email": "miguelsanychez@gmail.com",
+        "url": "https://miguelsanchezgonzalez.com"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/msg-projects/steam-can-i-play-with-you-api/issues"
+    },
+    "homepage": "https://github.com/msg-projects/steam-can-i-play-with-you-api#readme",
+    "dependencies": {
+        "cors": "2.8.4",
+        "dotenv": "6.0.0",
+        "express": "4.16.3",
+        "express-async-handler": "1.1.4",
+        "morgan": "^1.9.0",
+        "request": "2.88.0"
+    },
+    "devDependencies": {
+        "@msg-labs/eslint-config": "^1.0.4",
+        "eslint": "^5.6.0",
+        "nodemon": "^1.18.4"
+    }
 }

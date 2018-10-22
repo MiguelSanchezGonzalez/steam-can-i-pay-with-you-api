@@ -5,7 +5,7 @@ const cors = require( 'cors' );
 const morgan = require( 'morgan' );
 
 // Envs
-const env = require( './env' );
+const env = require( './env.js' );
 const port = env.PORT;
 const webAppServer = env.WEBAPP_SERVER;
 
