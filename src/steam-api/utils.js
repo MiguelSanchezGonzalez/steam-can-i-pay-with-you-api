@@ -48,7 +48,7 @@ function fetchSteamAPI ( resource, input, extraRequestOptions = {} ) {
                 return reject( error );
             }
 
-            return resolve( body.response );
+            return resolve( body.response || body );
 
         } );
 
