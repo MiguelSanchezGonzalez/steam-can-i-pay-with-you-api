@@ -2,7 +2,7 @@
 const router = require( 'express' ).Router;
 
 // Application
-const getOwnedGames = require( './get-owned-games' );
+const getOwnedGames = require( './games' );
 const friends = require( './friends.js' );
 
 const routes = router()

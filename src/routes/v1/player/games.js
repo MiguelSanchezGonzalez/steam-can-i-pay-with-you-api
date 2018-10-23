@@ -8,7 +8,7 @@ const routerOptions = { mergeParams: true };
 
 const routes = router( routerOptions )
     .get(
-        '/get-owned-games',
+        '/games',
         asyncHandler( getOwnedGames )
     );
 
