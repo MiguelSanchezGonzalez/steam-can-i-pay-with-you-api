@@ -1,0 +1,17 @@
+Useful Steam related links:
+    ☐ PHP Steam API https://github.com/DaMitchell/steam-api-php
+    ☐ Steam API documentation https://lab.xpaw.me/steam_api_documentation.html
+    ☐ Steam works documentation https://partner.steamgames.com/doc/store/getreviews
+    ☐ Steam Web API https://developer.valvesoftware.com/wiki/Steam_Web_API
+    ☐ Steam store API call https://store.steampowered.com/api/appdetails/?appids=252490
+    ☐ Steam store Application review Call https://store.steampowered.com/appreviews/252490?json=1&num_per_page=100&start_offset=100
+    ☐ Steam Store API docs https://wiki.teamfortress.com/wiki/User:RJackson/StorefrontAPI
+
+
+Development links:
+    ☐ Express.js http://expressjs.com/en/4x/api.html
+    ☐ Vue 2 https://vuejs.org/v2/guide/components-registration.html
+    ☐ Vue Router https://router.vuejs.org/guide/#javascript
+    ☐ Vue Cli https://router.vuejs.org/guide/#javascript
+    ☐ Vuex https://vuex.vuejs.org/guide/actions.html
+    ☐ Vue Material https://stasson.github.io/vue-mdc-adapter/#/component/textfield
