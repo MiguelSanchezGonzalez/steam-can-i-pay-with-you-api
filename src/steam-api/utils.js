@@ -32,6 +32,7 @@ const getRequestOptions = ( input, resource ) => {
 
 };
 
+
 function fetchSteamAPI ( resource, input, extraRequestOptions = {} ) {
     return new Promise( ( resolve, reject ) => {
 
@@ -56,7 +57,29 @@ function fetchSteamAPI ( resource, input, extraRequestOptions = {} ) {
 }
 
 
+const fetchSteamStoreAPI = ( resource, input ) => new Promise( ( resolve, reject ) => {
+
+    get(
+        `https://store.steampowered.com/api/${ resource }`,
+        {
+            json: true,
+            qs: input
+        },
+        ( error, response, body ) => {
+
+            if ( error || !body ) {
+                return reject( error );
+            }
+
+            return resolve( body );
+
+        }
+    );
+
+} );
+
 module.exports = {
     fetchSteamAPI,
+    fetchSteamStoreAPI,
     KEY
 };
